@@ -8,5 +8,6 @@ import com.npci.productthymeleaf.entity.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Integer>{
 	public List<Product> findByName(String name);
+	public List<Product> findByCategoryId(Integer id);
 
 }

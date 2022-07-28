@@ -9,6 +9,7 @@
 <body>
 	<a th:href="@{/product/showForm}" class ="btn btn-secondary btn-sm mb-3" style="margin-top: 10px;"> Add Product</a>
 	<a th:href="@{/product/showSearchForm}" class ="btn btn-secondary btn-sm mb-3" style="margin-top: 10px;"> Search Product</a>
+	<a th:href="@{/product/showDisplayByCategory}" class ="btn btn-secondary btn-sm mb-3" style="margin-top: 10px;"> Display by category</a>
 	<h3>Product List</h3>
 	<table class="table table-bordered table-stripped">
 		<thead class="thead-dark">
@@ -23,6 +24,7 @@
 				<th>UnitsInStock</th>
 				<th>DateCreated</th>
 				<th>LastUpdated</th>
+				<th>CategoryId</th>
 				<th>Action</th>
 			</tr>
 		</thead>
@@ -37,6 +39,7 @@
 			<td th:text="${prd.unitsInStock}"/>	
 			<td th:text="${prd.dateCreated}"/>	
 			<td th:text="${prd.lastUpdated}"/>	
+			<td th:text="${prd.categoryId}"/>	
 			<td>
 				<a class="btn btn-dark" th:href="@{/product/updateForm(prdId = ${prd.id})}">Update</a>
 				<a class="btn btn-dark" th:href="@{/product/delete(prdId = ${prd.id})}">Delete</a>

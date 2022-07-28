@@ -10,4 +10,5 @@ public interface ProductService {
 	public Product findById(Integer id);
 	public void deleteById(Integer id);
 	public List<Product> findByName(String name);
+	public List<Product> findByCategoryId(Integer id);
 }

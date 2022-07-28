@@ -68,4 +68,16 @@ public class ProductController {
 		model.addAttribute("PRODUCT", new Product());
 		return "prdUI/searchForm.html";
 	}
+	@GetMapping("/displayByCategory")
+	public String displayByCategory(@ModelAttribute("PRODUCT") Product p, Model model){
+		List<Product> products = service.findByCategoryId(p.getCategoryId());
+		model.addAttribute("PRODUCT", products);
+		
+		return "prdUI/products.html";
+	}
+	@GetMapping("/showDisplayByCategory")
+	public String displayForm(Model model) {
+		model.addAttribute("PRODUCT", new Product());
+		return "prdUI/categorySearch.html";
+	}
 }

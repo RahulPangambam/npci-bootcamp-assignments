@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Products</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+	<a th:href="@{/product/showForm}" class ="btn btn-secondary btn-sm mb-3" style="margin-top: 10px;"> Add Product</a>
+	<a th:href="@{/product/showSearchForm}" class ="btn btn-secondary btn-sm mb-3" style="margin-top: 10px;"> Search Product</a>
+	<h3>Product List</h3>
+	<table class="table table-bordered table-stripped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Id</th>
+				<th>Sku</th>
+				<th>Name</th>
+				<th>Description</th>
+				<th>UnitPrice</th>
+				<th>ImageUrl</th>
+				<th>Active</th>
+				<th>UnitsInStock</th>
+				<th>DateCreated</th>
+				<th>LastUpdated</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tr th:each="prd:${PRODUCT}">
+			<td th:text="${prd.id}"/>			
+			<td th:text="${prd.sku}"/>			
+			<td th:text="${prd.name}"/>			
+			<td th:text="${prd.description}"/>			
+			<td th:text="${prd.unitPrice}"/>			
+			<td th:text="${prd.imageUrl}"/>		
+			<td th:text="${prd.active}"/>		
+			<td th:text="${prd.unitsInStock}"/>	
+			<td th:text="${prd.dateCreated}"/>	
+			<td th:text="${prd.lastUpdated}"/>	
+			<td>
+				<a class="btn btn-dark" th:href="@{/product/updateForm(prdId = ${prd.id})}">Update</a>
+				<a class="btn btn-dark" th:href="@{/product/delete(prdId = ${prd.id})}">Delete</a>
+			</td>			
+		</tr>
+	</table>
+</body>
+</html>

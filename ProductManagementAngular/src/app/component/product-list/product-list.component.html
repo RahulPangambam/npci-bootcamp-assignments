@@ -1,0 +1,38 @@
+<div class="container" style="margin-top: 10px;">
+    <span class = "container" style="display: inline;">
+        <h2 style="display: inline;">List of Products</h2>
+        <button class="btn btn-dark" style="margin-left: 710px;" (click) = "goToProdForm()"> Add Product </button>
+    </span>
+    <table class="table" style="margin-top: 10px;">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">SKU</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Image</th>
+                <th scope="col">Active</th>
+                <th scope="col">Units in Stock</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Last Updated</th>
+                <th scope="col">Category Id</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+            <tr *ngFor="let prod of products">
+                <td>{{prod.id}}</td>
+                <td>{{prod.sku}}</td>
+                <td>{{prod.name}}</td>
+                <td>{{prod.description}}</td>
+                <td>{{prod.unitPrice}}</td>
+                <td>{{prod.imageUrl}}</td>
+                <td>{{prod.active}}</td>
+                <td>{{prod.unitsInStock}}</td>
+                <td>{{prod.dateCreated}}</td>
+                <td>{{prod.lastUpdated}}</td>
+                <td>{{prod.categoryId}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

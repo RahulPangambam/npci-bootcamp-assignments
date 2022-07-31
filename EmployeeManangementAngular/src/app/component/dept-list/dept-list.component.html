@@ -1,0 +1,22 @@
+<div class="container" style="margin-top: 10px;">
+    <span class = "container" style="display: inline;">
+        <h2 style="display: inline;">List of Departments</h2>
+        <button class="btn btn-dark" style="margin-left: 660px;" (click) = "goToDeptForm()"> Add Department </button>
+    </span>
+    <table class="table" style="margin-top: 10px">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Department No</th>
+                <th scope="col">Department Name</th>
+                <th scope="col">Location</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+            <tr *ngFor="let dept of departments">
+                <td>{{dept.deptNo}}</td>
+                <td>{{dept.deptName}}</td>
+                <td>{{dept.location}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

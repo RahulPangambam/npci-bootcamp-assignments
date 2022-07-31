@@ -1,0 +1,25 @@
+<div class="container" style="margin: 20px; margin-left: 400px;">
+    <h2>Department Form</h2>
+    <hr style="width:450px">
+    <form #deptForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Department Number</label>
+            <div class="col-sm-3">
+                <input type="text" name="deptNo" class="form-control mb-2" [(ngModel)]="department.deptNo">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Department Name</label>
+            <div class="col-sm-3">
+                <input type="text" name="deptName" class="form-control mb-2" [(ngModel)]="department.deptName">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Location</label>
+            <div class="col-sm-3">
+                <input type="text" name="location" class="form-control mb-2" [(ngModel)]="department.location">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-sm mb-3">Save</button>
+    </form>
+</div>

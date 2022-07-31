@@ -1,0 +1,32 @@
+<div class="container" style="margin-top: 10px;">
+    <span class = "container" style="display: inline;">
+        <h2 style="display: inline;">List of Employees</h2>
+        <button class="btn btn-dark" style="margin-left: 710px;" (click) = "goToEmpForm()"> Add Employee </button>
+    </span>
+    <table class="table" style="margin-top: 10px;">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Employee No</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Job</th>
+                <th scope="col">Hire Date</th>
+                <th scope="col">Manager Id</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Commission</th>
+                <th scope="col">Departmnet No</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.empNo}}</td>
+                <td>{{emp.eName}}</td>
+                <td>{{emp.job}}</td>
+                <td>{{emp.hireDate}}</td>
+                <td>{{emp.managerId}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.commission}}</td>
+                <td>{{emp.deptNo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

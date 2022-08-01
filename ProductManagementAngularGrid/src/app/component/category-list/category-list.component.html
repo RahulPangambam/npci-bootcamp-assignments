@@ -1,0 +1,20 @@
+<div class="container" style="margin-top: 10px;">
+    <span class = "container" style="display: inline;">
+        <h2 style="display: inline;">List of Categories</h2>
+        <button class="btn btn-dark" style="margin-left: 660px;" (click) = "goToCatForm()"> Add Category </button>
+    </span>
+    <table class="table" style="margin-top: 10px">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Category Id</th>
+                <th scope="col">Category Name</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+            <tr *ngFor="let cat of categories">
+                <td>{{cat.categoryId}}</td>
+                <td>{{cat.categoryName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
